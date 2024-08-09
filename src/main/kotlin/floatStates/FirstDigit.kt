@@ -7,7 +7,7 @@ class FirstDigit : State {
         when (character) {
             in "123456789" -> WholeDigits()
             "." -> Decimal()
-            "0" -> ZeroFirst()
+            "0" -> LeadingZero()
             else -> Invalid()
         }
 }

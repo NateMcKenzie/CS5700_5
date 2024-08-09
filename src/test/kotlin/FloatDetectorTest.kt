@@ -12,7 +12,7 @@ class FloatDetectorTest {
     fun goodExampleTest() = assertTrue(detector.detect("123.34"))
 
     @Test
-    fun zeroFirstTest() = assertTrue(detector.detect("0.20000"))
+    fun leadingZeroTest() = assertTrue(detector.detect("0.20000"))
 
     @Test
     fun bigTest() = assertTrue(detector.detect("12349871234.12340981234098"))
@@ -33,7 +33,7 @@ class FloatDetectorTest {
     fun closingDecimalTest() = assertFalse(detector.detect("123."))
 
     @Test
-    fun leadingZeroTest() = assertFalse(detector.detect("012.4"))
+    fun leadingZeroInvalidTest() = assertFalse(detector.detect("012.4"))
 
     @Test
     fun invalidStartTest() = assertFalse(detector.detect("a12.4"))

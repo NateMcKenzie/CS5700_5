@@ -13,6 +13,10 @@ abstract class Detector(private val initialState: State){
         return false
     }
 
+    open fun preValidate(input: String) = true
+
+    protected abstract fun checkFinalState() : Boolean
+
     private fun splitString(input: String): List<String>{
         val list = mutableListOf<String>()
         input.forEach {
@@ -30,8 +34,4 @@ abstract class Detector(private val initialState: State){
     private fun resetState() {
         state = initialState
     }
-
-    open fun preValidate(input: String) = true
-
-    abstract fun checkFinalState() : Boolean
 }
