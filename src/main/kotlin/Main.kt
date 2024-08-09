@@ -1,5 +1,5 @@
 fun main() {
-    val detectors = arrayOf(IntegerDetector(), FloatDetector(), BinaryDetector(), EmailDetector())
+    val detectors = arrayOf(IntegerDetector(), FloatDetector(), BinaryDetector(), EmailDetector(), PasswordDetector())
 
     while (true){
         print("""
