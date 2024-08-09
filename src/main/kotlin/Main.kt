@@ -1,5 +1,5 @@
 fun main() {
-    val detectors = arrayOf(IntegerDetector(), FloatDetector())
+    val detectors = arrayOf(IntegerDetector(), FloatDetector(), BinaryDetector())
 
     while (true){
         print("""
