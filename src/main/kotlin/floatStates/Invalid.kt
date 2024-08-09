@@ -1,4 +1,4 @@
-package integerStates
+package floatStates
 
 import State
 
