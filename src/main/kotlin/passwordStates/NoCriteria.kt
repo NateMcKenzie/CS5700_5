@@ -3,9 +3,9 @@ package passwordStates
 import State
 
 class NoCriteria : State {
-    override fun consume(digit: String) = when(digit){
+    override fun consume(character: String) = when(character){
         in "(!@#$%&*)" -> ClosingSpecial()
-        digit.uppercase() -> CapitalOnly()
+        character.uppercase() -> CapitalOnly()
         else -> this
     }
 }

@@ -3,7 +3,7 @@ package emailStates
 import State
 
 class TLDStart : State{
-    override fun consume(digit: String) = when(digit){
+    override fun consume(character: String) = when(character){
         in " @." -> Invalid()
         else -> TLD()
     }

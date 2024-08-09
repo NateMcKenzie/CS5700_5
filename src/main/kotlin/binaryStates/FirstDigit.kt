@@ -3,7 +3,7 @@ package binaryStates
 import State
 
 class FirstDigit : State {
-    override fun consume(digit: String) = when (digit) {
+    override fun consume(character: String) = when (character) {
         "1" -> One()
         else -> Invalid()
     }

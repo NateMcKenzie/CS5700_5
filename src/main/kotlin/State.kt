@@ -1,3 +1,3 @@
 interface State {
-    fun consume(digit: String) : State
+    fun consume(character: String) : State
 }

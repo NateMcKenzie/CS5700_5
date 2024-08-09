@@ -3,7 +3,7 @@ package emailStates
 import State
 
 class User : State{
-    override fun consume(digit: String) = when(digit){
+    override fun consume(character: String) = when(character){
         " " -> Invalid()
         "@" -> SiteStart()
         else -> this
